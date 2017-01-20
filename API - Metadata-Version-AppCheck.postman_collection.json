@@ -1,0 +1,1251 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API - Metadata/Version/AppCheck",
+		"_postman_id": "7696bf98-38a7-1a85-ef16-0a15f1ca1430",
+		"description": "APi requests for metadata, versioning and app-check",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /app-check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{base_url}}/app-check",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting app-check data"
+			},
+			"response": [
+				{
+					"id": "bbc084b8-0594-41af-b5b7-d1bb26fccbab",
+					"name": "Sample response",
+					"originalRequest": {
+						"url": "{{base_url}}/app-check",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 8cc3529270bfabe037246c63f74414ccc5c1082283aae4720be1e2695c812829",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 18:57:33 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "780",
+					"body": "{\"metrics\":{\"failures\":{\"Srm::Api::Accounts::AccountsService\":{\"404\":\"2\"},\"Srm::Api::Engage::EngageService\":{},\"Srm::Api::Publish::PublishService\":{\"404\":\"2\",\"500\":\"16\"}}},\"components\":{\"postgres\":true,\"redis\":true}}"
+				}
+			]
+		},
+		{
+			"name": "GET /accounts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{base_url}}/accounts/v1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting version data for Accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /accounts/v1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{base_url}}/accounts/v1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting version data for Accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /engage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{base_url}}/engage",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting version data for Engage"
+			},
+			"response": [
+				{
+					"id": "6c2d91b2-cbfd-4e6e-9bd7-5a8ef80f023f",
+					"name": "Sample response",
+					"originalRequest": {
+						"url": "{{base_url}}/engage",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{auth_token}}",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 19:14:33 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "278",
+					"body": "{\"items\":[{\"version\":\"v1\",\"lifecycle\":\"active\",\"isLatest\":true,\"catalog\":{\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/metadata-catalog\"}]},\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1\"}]}],\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage\"}]}"
+				}
+			]
+		},
+		{
+			"name": "GET /engage/v1 ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{base_url}}/engage/v1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting version data for Engage"
+			},
+			"response": [
+				{
+					"id": "8bde56b2-e03a-4b5c-9eb2-e5e15618efc6",
+					"name": "Sample response",
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 19:06:07 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "112",
+					"body": "{\"version\":\"v1\",\"lifecycle\":\"active\",\"catalog\":{\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/metadata-catalog\"}]},\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1\"}],\"isLatest\":true}"
+				}
+			]
+		},
+		{
+			"name": "GET /publish",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{base_url}}/publish",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting version data for Publish"
+			},
+			"response": [
+				{
+					"id": "58b79d1c-98a2-4508-9ea8-6196632ef418",
+					"name": "Sample response",
+					"originalRequest": {
+						"url": "{{base_url}}/publish",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{auth_token}}",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 20:55:59 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": "Custom header"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "109",
+					"body": "{\"items\":[{\"version\":\"v1\",\"lifecycle\":\"active\",\"isLatest\":true,\"catalog\":{\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish/v1/metadata-catalog\"}]},\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish/v1\"}]}],\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish\"}]}"
+				}
+			]
+		},
+		{
+			"name": "GET /publish/v1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{base_url}}/publish/v1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting version data for Publish"
+			},
+			"response": [
+				{
+					"id": "47d61631-2d05-4057-b31b-c4d056fdeff0",
+					"name": "Sample response",
+					"originalRequest": {
+						"url": "{{base_url}}/publish/v1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{auth_token}}",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 20:56:09 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": "Custom header"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "110",
+					"body": "{\"version\":\"v1\",\"lifecycle\":\"active\",\"catalog\":{\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish/v1/metadata-catalog\"}]},\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish/v1\"}],\"isLatest\":true}"
+				}
+			]
+		},
+		{
+			"name": "GET /metadata-catalog accounts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/metadata-catalog",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting metadata for Accounts"
+			},
+			"response": [
+				{
+					"id": "10b26e8b-dee8-4a44-adfe-5cbfe9613bf5",
+					"name": "Sample response",
+					"originalRequest": {
+						"url": "{{accounts_gk}}/metadata-catalog",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{auth_token}}",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 20:53:40 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "317",
+					"body": "{\"items\":[{\"name\":\"accounts\",\"links\":[{\"rel\":\"alternate\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/metadata-catalog/accounts\",\"mediaType\":\"application/schema+json\"},{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/metadata-catalog/accounts\",\"mediaType\":\"application/json\"},{\"rel\":\"describes\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/accounts\"}]},{\"name\":\"bundles\",\"links\":[{\"rel\":\"alternate\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/metadata-catalog/bundles\",\"mediaType\":\"application/schema+json\"},{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/metadata-catalog/bundles\",\"mediaType\":\"application/json\"},{\"rel\":\"describes\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles\"}]},{\"name\":\"resources\",\"links\":[{\"rel\":\"alternate\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/metadata-catalog/resources\",\"mediaType\":\"application/schema+json\"},{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/metadata-catalog/resources\",\"mediaType\":\"application/json\"},{\"rel\":\"describes\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/resources\"}]}],\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/metadata-catalog\"},{\"rel\":\"up\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1\"}]}"
+				}
+			]
+		},
+		{
+			"name": "GET /metadata-catalog engage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/metadata-catalog",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting metadata for Engage"
+			},
+			"response": [
+				{
+					"id": "706717c4-4d6e-47a5-a9eb-3344ff0df6bc",
+					"name": "Sample response",
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 26 May 2015 23:35:15 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "204",
+					"body": "{\"items\":[{\"name\":\"messages\",\"links\":[{\"rel\":\"alternate\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/metadata-catalog/messages\",\"mediaType\":\"application/schema+json\"},{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/metadata-catalog/messages\",\"mediaType\":\"application/json\"},{\"rel\":\"describes\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/messages\"}]}],\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/metadata-catalog\"},{\"rel\":\"up\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1\"}]}"
+				}
+			]
+		},
+		{
+			"name": "GET /metadata-catalog/messages ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/metadata-catalog/messages",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting metadata list for messages JSON"
+			},
+			"response": [
+				{
+					"id": "3cd7f654-e7f6-40da-943e-cd46e0c2174e",
+					"name": "Sample response",
+					"originalRequest": {
+						"url": "{{engage_gk}}/metadata-catalog/messages",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{auth_token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 26 May 2015 23:59:38 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": "Custom header"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "116",
+					"body": "{\"name\":\"messages\",\"links\":[{\"rel\":\"alternate\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/metadata-catalog/messages\",\"mediaType\":\"application/schema+json\"},{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/metadata-catalog/messages\",\"mediaType\":\"application/json\"},{\"rel\":\"describes\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/messages\"}]}"
+				}
+			]
+		},
+		{
+			"name": "GET /metadata-catalog/messages",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/metadata-catalog/messages",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/schema+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting metadata list for messages SCHEMA+JSON"
+			},
+			"response": [
+				{
+					"id": "e499e20a-6dd5-445c-9c1c-516a3f4e51d2",
+					"name": "Sample response",
+					"originalRequest": {
+						"url": "{{engage_gk}}/metadata-catalog/messages",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{auth_token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/schema+json",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 26 May 2015 23:59:22 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": "Custom header"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "125",
+					"body": "{\"definitions\":{\"resource\":{\"properties\":{\"id\":{\"type\":\"integer\",\"description\":\"ID of the resource.\"},\"resourceName\":{\"type\":\"string\",\"description\":\"Name of the network resource.\"},\"resourceType\":{\"type\":\"string\",\"description\":\"Network type of the resource. Can be facebook, facebook_public, twitter, google_plus, instagram, linkedin, sina_weibo, listen_topic.\"},\"listenSource\":{\"type\":\"string\",\"description\":\"Describes the network source when the resource is a listen_topic.\"},\"externalId\":{\"type\":\"string\",\"description\":\"The external ID of the network resource.\"},\"externalLink\":{\"type\":\"string\",\"description\":\"The link to the network resource.\"}}},\"author\":{\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"Full name of the author.\"},\"authorImage\":{\"type\":\"string\",\"description\":\"Link to an image of the author.\"},\"authorProfileUrl\":{\"type\":\"string\",\"description\":\"Link to the profile of the author.\"},\"authorExternalId\":{\"type\":\"string\",\"description\":\"External network ID of the author.\"},\"authorFollowersCount\":{\"type\":\"integer\",\"description\":\"If the network supports this, the number of followers for the author.\"},\"authorKlout\":{\"type\":\"integer\",\"description\":\"Klout score of the author.\"}}},\"originalAuthor\":{\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"Full name of the author.\"},\"authorImage\":{\"type\":\"string\",\"description\":\"Link to an image of the author.\"},\"authorProfileUrl\":{\"type\":\"string\",\"description\":\"Link to the profile of the author.\"},\"authorExternalId\":{\"type\":\"string\",\"description\":\"External network ID of the author.\"},\"authorFollowersCount\":{\"type\":\"integer\",\"description\":\"If the network supports this, the number of followers for the author.\"},\"authorKlout\":{\"type\":\"integer\",\"description\":\"Klout score of the author.\"}}}},\"properties\":{\"id\":{\"type\":\"string\",\"description\":\"ID of the resource\"},\"externalId\":{\"type\":\"string\",\"description\":\"ID of the resource\"},\"bundleId\":{\"type\":\"integer\",\"description\":\"ID of the root bundle account.\"},\"resource\":{\"$ref\":\"#/definitions/resource\",\"type\":\"object\",\"description\":\"Info about the social network resource.\"},\"author\":{\"$ref\":\"#/definitions/author\",\"type\":\"object\",\"description\":\"Info about the author of the message.\"},\"originalAuthor\":{\"$ref\":\"#/definitions/originalAuthor\",\"type\":\"object\",\"description\":\"Info about the original author of the message or message thread.\"},\"postedAt\":{\"type\":\"string\",\"description\":\"Date and time the message was posted.\"},\"threadPostedAt\":{\"type\":\"string\",\"description\":\"Date and time the of original post for the thread in which this message is included.\"},\"status\":{\"type\":\"string\",\"description\":\"The Engage status of this message. Can be: active, archived, hidden, deleted.\"},\"body\":{\"type\":\"string\",\"description\":\"The body of the message.\"},\"labels\":{\"type\":\"array\",\"description\":\"Labels that have been attached manually or automatically to this message.\"},\"attachments\":{\"type\":\"array\",\"description\":\"Array of pictures, videos, or other items attached to this message.\"},\"liked\":{\"type\":\"boolean\",\"description\":\"Indicates whether or not this message is liked.\"},\"likesCount\":{\"type\":\"integer\",\"description\":\"The number of likes this message has received.\"},\"favorited\":{\"type\":\"integer\",\"description\":\"Indicates whether or not this message is favorited.\"},\"favoriteCount\":{\"type\":\"integer\",\"description\":\"The number of favorites this message has received.\"},\"repostCount\":{\"type\":\"integer\",\"description\":\"The number of times this message has been reposted/retweeted.\"},\"repliesCount\":{\"type\":\"integer\",\"description\":\"The number of replies this message has.\"},\"replies\":{\"$ref\":\"#/engage/versions/v1/messages/metadata-catalog/replies\",\"type\":\"object\",\"description\":null},\"links\":{\"type\":\"array\",\"description\":null}},\"links\":[{\"rel\":\"alternate\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/metadata-catalog/messages\",\"mediaType\":\"application/json\"},{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/metadata-catalog/messages\",\"mediaType\":\"application/schema+json\"},{\"rel\":\"describes\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/engage/v1/messages\"}]}"
+				}
+			]
+		},
+		{
+			"name": "GET /metadata-catalog publish",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/metadata-catalog",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting metadata for Publish"
+			},
+			"response": [
+				{
+					"id": "1d2c7864-593b-4a64-b46d-e06bead0c7c6",
+					"name": "Sample response",
+					"originalRequest": {
+						"url": "{{publish_gk}}/metadata-catalog",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{auth_token}}",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 20:55:29 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": "Custom header"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": "Custom header"
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "1120",
+					"body": "{\"items\":[{\"name\":\"posts\",\"links\":[{\"rel\":\"alternate\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish/v1/metadata-catalog/posts\",\"mediaType\":\"application/schema+json\"},{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish/v1/metadata-catalog/posts\",\"mediaType\":\"application/json\"},{\"rel\":\"describes\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish/v1/posts\"}]}],\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish/v1/metadata-catalog\"},{\"rel\":\"up\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/publish/v1\"}]}"
+				}
+			]
+		}
+	]
+}

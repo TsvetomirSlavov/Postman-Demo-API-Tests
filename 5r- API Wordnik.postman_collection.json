@@ -1,0 +1,151 @@
+{
+	"variables": [],
+	"info": {
+		"name": "5r: API Wordnik",
+		"_postman_id": "13cdcc5d-a42d-dcaa-afa4-040b24426ee1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get access token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							"//Verifying response data"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://api.wordnik.com:80/v4/account.json/authenticate/kalynovskiy?password=Yuriy_00&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "get access token"
+			},
+			"response": []
+		},
+		{
+			"name": "/word.json/{word}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							"//Verifying response data"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://api.wordnik.com:80/v4/word.json/cloud?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "get word"
+			},
+			"response": []
+		},
+		{
+			"name": "/word.json/{word}/examples",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							"//Verifying response data"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://api.wordnik.com:80/v4/word.json/cloud/examples?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "get word examples"
+			},
+			"response": []
+		},
+		{
+			"name": "/word.json/{word}/definitions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							"//Verifying response data"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://api.wordnik.com:80/v4/word.json/cloud/definitions?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "get word definition"
+			},
+			"response": []
+		},
+		{
+			"name": "/word.json/{word}/phrases",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							"//Verifying response data"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://api.wordnik.com:80/v4/word.json/cloud/phrases?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "get word phrases"
+			},
+			"response": []
+		}
+	]
+}

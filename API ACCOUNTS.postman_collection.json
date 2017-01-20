@@ -1,0 +1,556 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API ACCOUNTS",
+		"_postman_id": "4905ab83-d54b-ebde-a325-e717ae0dd82f",
+		"description": "Collection of Public API endpoints for Accounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /accounts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting accounts list"
+			},
+			"response": [
+				{
+					"id": "bdebd2fd-b739-4ce0-b9ba-54e3633abe5e",
+					"name": "Sample response",
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "must-revalidate, private, max-age=0",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 29 Dec 2014 23:54:47 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "X-Rack-Cache",
+							"key": "X-Rack-Cache",
+							"value": "miss",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "897",
+							"description": ""
+						},
+						{
+							"name": "X-Request-Id",
+							"key": "X-Request-Id",
+							"value": "bc4041f4f23189b0157f6754555b52be",
+							"description": ""
+						},
+						{
+							"name": "X-Runtime",
+							"key": "X-Runtime",
+							"value": "0.341349",
+							"description": ""
+						},
+						{
+							"name": "X-UA-Compatible",
+							"key": "X-UA-Compatible",
+							"value": "IE=Edge,chrome=1",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "581",
+					"body": "{\"items\":[{\"bundle_id\":4398,\"name\":\"#2 ENGAGE_ONLY_ACCT\",\"description\":null},{\"bundle_id\":4548,\"name\":\"#3 ENGAGE enabled account\",\"description\":null},{\"bundle_id\":5437,\"name\":\"#ODC QA acct\",\"description\":null},{\"bundle_id\":5034,\"name\":\"#zerotolerance\",\"description\":null},{\"bundle_id\":7265,\"name\":\"broker_qa\",\"description\":null}],\"page\":1,\"last_page\":5,\"count\":5,\"has_more\":true,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://gatekeeper.staging.cloud.vitrue.com/admin/v1/accounts\"},{\"rel\":\"self\",\"href\":\"https://gatekeeper.staging.cloud.vitrue.com/admin/v1/accounts?page=1\"},{\"rel\":\"next\",\"href\":\"https://gatekeeper.staging.cloud.vitrue.com/admin/v1/accounts?page=2\"}]}"
+				}
+			]
+		},
+		{
+			"name": "GET /accounts total",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts?total_results=true",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting accounts list (total)"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /accounts?limit=100",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts?limit=100",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Returns up to 100 accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /accounts?page=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts?page=1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Returns paginated(e.g. from page1) accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /accounts?offset=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts?offset=1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "get accounts excluding the first one"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /accounts/:bundle_id/bundles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts/{{bundle_id}}/bundles",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting bundle including sub-bundles info"
+			},
+			"response": [
+				{
+					"id": "38b2ddd9-3d7c-4e4a-8a9a-f98aea294b1a",
+					"name": "id moved to top",
+					"originalRequest": {
+						"url": "{{accounts_gk}}/accounts/{{bundle_id}}/bundles",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{auth_token}}",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "5212",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=collection",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 07 May 2015 19:24:27 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "896",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "2019",
+					"body": "{\"count\":20,\"hasMore\":true,\"items\":[{\"id\":10261,\"name\":\"3\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/10261\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/10261\"}]},{\"id\":10265,\"name\":\"add #2\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/10265\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/10265\"}]},{\"id\":9497,\"name\":\"Ants\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9497\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9497\"}]},{\"id\":9493,\"name\":\"Arachnids \",\"description\":\"Little 8-legged critters - creep me out\",\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9493\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9493\"}]},{\"id\":9042,\"name\":\"Baby Rex\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9042\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9042\"}]},{\"id\":7735,\"name\":\"Bald\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7735\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7735\"}]},{\"id\":7686,\"name\":\"Beagle\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7686\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7686\"}]},{\"id\":7681,\"name\":\"Birds - rename\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7681\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7681\"}]},{\"id\":9526,\"name\":\"Black Widow\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9526\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9526\"}]},{\"id\":9528,\"name\":\"Brown Recluse\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9528\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9528\"}]},{\"id\":9885,\"name\":\"Bundle 12345\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9885\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9885\"}]},{\"id\":9884,\"name\":\"bundle bundle\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9884\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9884\"}]},{\"id\":7683,\"name\":\"Calico\",\"description\":\"Words. So Many Words.\",\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7683\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7683\"}]},{\"id\":7690,\"name\":\"Callie\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7690\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7690\"}]},{\"id\":9742,\"name\":\"Caramel\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9742\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9742\"}]},{\"id\":10010,\"name\":\"Catchall\",\"description\":\"Here is some description\",\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/10010\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/10010\"}]},{\"id\":7679,\"name\":\"Cats\",\"description\":\"Meow\",\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7679\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7679\"}]},{\"id\":9649,\"name\":\"Chocolates\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9649\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9649\"}]},{\"id\":9747,\"name\":\"Coconut\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9747\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9747\"}]},{\"id\":9775,\"name\":\"Cordial Cherry\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9775\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9775\"}]}],\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/accounts/5487/bundles\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/accounts/5487/bundles\"},{\"rel\":\"next\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/accounts/5487/bundles?offset=20&limit=20\"}]}"
+				}
+			]
+		},
+		{
+			"name": "GET /accounts/:bundle_id/resources",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts/{{bundle_id}}/bundles",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting bundle including sub-bundles info"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /bundles/:bundle_id/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/bundles/{{bundle_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting bundle info(no subbundles)"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /bundles/:bundle_id/resources",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/bundles/{{bundle_id}}/resources",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting resources for specific bundle"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /accounts/:account_id/resources",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts/{{bundle_id}}/resources",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting resources belonging to an account"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /accounts/:account_id/resources?page=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts/{{bundle_id}}/resources?page=1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting resources belonging to an account. First page only"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /resources/:resource_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/resources/{{insta_resource_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting resources based on resource_id"
+			},
+			"response": [
+				{
+					"id": "e46f76c9-016b-4fc8-b7df-04aabd13d852",
+					"name": "403 Response",
+					"originalRequest": {
+						"url": "{{accounts_gk}}/resources/{{insta_resource_id}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{auth_token}}",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						"[{\"name\":\"Connection\",\"key\":\"Connection\",\"value\":\"keep-alive\",\"description\":\"\"},{\"name\":\"Content-Length\",\"key\":\"Content-Length\",\"value\":\"175\",\"description\":\"\"},{\"name\":\"Content-Type\",\"key\":\"Content-Type\",\"value\":\"application/vnd.oracle.resource+json; type=error\",\"description\":\"\"},{\"name\":\"Date\",\"key\":\"Date\",\"value\":\"Mon, 18 May 2015 18:01:14 GMT\",\"description\":\"\"},{\"name\":\"Server\",\"key\":\"Server\",\"value\":\"nginx/1.4.2\",\"description\":\"\"},{\"name\":\"Status\",\"key\":\"Status\",\"value\":\"403 Forbidden\",\"description\":\"\"},{\"name\":\"X-Content-Type-Options\",\"key\":\"X-Content-Type-Options\",\"value\":\"nosniff\",\"description\":\"\"},{\"name\":\"X-RateLimit-Limit\",\"key\":\"X-RateLimit-Limit\",\"value\":\"900\",\"description\":\"\"},{\"name\":\"X-RateLimit-Remaining\",\"key\":\"X-RateLimit-Remaining\",\"value\":\"893\",\"description\":\"\"}]"
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"responseTime": "267",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4\",\"title\":\"Request is forbidden.\",\"detail\":\"An error occurred executing the request:   \",\"status\":403}"
+				}
+			]
+		}
+	]
+}

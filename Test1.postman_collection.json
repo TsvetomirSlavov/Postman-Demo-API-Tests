@@ -1,0 +1,56 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Test1",
+		"_postman_id": "0899d9d8-98c3-7011-3b37-743356d87133",
+		"description": "Just learning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Test1",
+			"request": {
+				"url": "https://10.65.102.238:3000/api/repositories/test1/library/entities",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bWFkbWluOm1hZG1pbg==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"command\": \"export\",\n    \"data\": {\n        \"filename\": \"exportEBR\",\n        \"fileType\": \"ebr\",\n        \"libEntity\": [\"1\"]\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST Failing Rows",
+			"request": {
+				"url": "https://10.65.102.238:3000/api/repositories/test1/entities/1/businessrules/2/failingrows",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"command\": \"export\",\r\n    \"options\": {},\r\n    \"data\": {\r\n        \"filename\": \"failingrows.csv\",\r\n        \"filetype\":\"csv\",\r\n        \"encoding\":\"\"\r\n    }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

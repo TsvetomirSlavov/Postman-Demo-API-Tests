@@ -1,0 +1,65 @@
+{
+	"variables": [],
+	"info": {
+		"name": "User Story#37776",
+		"_postman_id": "fe7a74cb-82e1-4327-c103-4028ac2f9419",
+		"description": "Associate rules in a Rule-Set into an Entity(ies). \"Run as Scheduled Task\"",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - Associate Business Rule to an Entity",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "madmin",
+						"password": "madmin",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://10.65.102.238:3000/api/repositories/test1/library/entities/9",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bWFkbWluOm1hZG1pbg==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"command\": \"associate\",\r\n    \"data\": {\r\n        \"library\": \"9\",\r\n        \"entity\": [\r\n            {\r\n                \"id\": \"7\",\r\n                \"mapping\": [\r\n                    {\r\n                        \"realAttr\": \"7\",\r\n                        \"libAttr\": \"9\"\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}"
+				},
+				"description": "Associate rules in a Rule-Set into an Entity(ies) \"Run as a Scheduled Task\""
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Run all Entity Business Rules",
+			"request": {
+				"url": "https://10.65.102.238:3000/api/repositories/test1/entities/7/businessrules",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"command\": \"run\",\r\n    \"data\": {\r\n        \"entity\": \"7\",\r\n        \"option\": \"-all\"\r\n    }\r\n}"
+				},
+				"description": "Associate rules in a Rule-Set into an Entity(ies) \"Run as a Scheduled Task\""
+			},
+			"response": []
+		}
+	]
+}

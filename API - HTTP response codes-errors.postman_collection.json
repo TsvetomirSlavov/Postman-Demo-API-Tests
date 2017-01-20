@@ -1,0 +1,1536 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API - HTTP response codes/errors",
+		"_postman_id": "819e8e67-a3da-28e1-9e35-6f070cd5bc0e",
+		"description": "Code  Title                  Description\n200      OK                      The request was successful.\n201      Created                  The resource was successfully created.\n202      Async created          The resource was asynchronously created.\n400      Bad request              Bad request.\n401      Unauthorized          The user credentials provided with the request are invalid or do not provide the necessary level of access.\n403      Request is forbidden  An error occurred executing the request.\n404      Unknown url/method combination  The desired route is not available for the specified HTTP method.\n422      Unprocessable entity or resource  The entity or resource identified in the request either does not exist or is otherwise unprocessable.\n500      Internal server error  An unexpected error occurred processing the request.\n501      Not implemented error  The requested functionality has not been implemented.\n502      SRM API server error  An error occurred processing the request.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "200 OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "The request was successful."
+			},
+			"response": [
+				{
+					"id": "cd905a3a-e065-4efd-8f9f-0a08bbca57be",
+					"name": "Sample response",
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "5372",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=collection",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 20:32:39 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "899",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "1787",
+					"body": "{\"count\":20,\"hasMore\":true,\"items\":[{\"name\":\"#2 ENGAGE_ONLY_ACCT\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4398\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4398\"}],\"bundleId\":4398},{\"name\":\"#3 ENGAGE enabled account\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4548\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4548\"}],\"bundleId\":4548},{\"name\":\"#ODC QA acct\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/5437\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/5437\"}],\"bundleId\":5437},{\"name\":\"#zerotolerance\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/5034\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/5034\"}],\"bundleId\":5034},{\"name\":\"All features QA Staging\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/5578\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/5578\"}],\"bundleId\":5578},{\"name\":\"broker_qa\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7265\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7265\"}],\"bundleId\":7265},{\"name\":\"ENGAGE SHARDING QA\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9424\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9424\"}],\"bundleId\":9424},{\"name\":\"Engage Sharding QA test\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/10208\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/10208\"}],\"bundleId\":10208},{\"name\":\"Engage-Listen-Integrated-Acct\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7201\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/7201\"}],\"bundleId\":7201},{\"name\":\"ENGAGE_ONLY_ACCT\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4387\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4387\"}],\"bundleId\":4387},{\"name\":\"ENGAGE_ONLY_ACCT #3\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4419\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4419\"}],\"bundleId\":4419},{\"name\":\"Legacy_Engage\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/8228\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/8228\"}],\"bundleId\":8228},{\"name\":\"NEW SHARD QA TEST\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9488\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9488\"}],\"bundleId\":9488},{\"name\":\"NEW-QA-UCF-STAGE\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/5902\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/5902\"}],\"bundleId\":5902},{\"name\":\"ODC-ENGAGE ACCT \",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/8532\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/8532\"}],\"bundleId\":8532},{\"name\":\"Oracle QA\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/1843\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/1843\"}],\"bundleId\":1843},{\"name\":\"Public API testing\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9059\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9059\"}],\"bundleId\":9059},{\"name\":\"QA\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4341\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4341\"}],\"bundleId\":4341},{\"name\":\"QA DBInbox acct\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9454\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/9454\"}],\"bundleId\":9454},{\"name\":\"QA Internal Test\",\"description\":null,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4343\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/bundles/4343\"}],\"bundleId\":4343}],\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/accounts\"},{\"rel\":\"self\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/accounts\"},{\"rel\":\"next\",\"href\":\"https://srm-api.sandbox.cloud.vitrue.com/admin/v1/accounts?offset=20&limit=20\"}]}"
+				}
+			]
+		},
+		{
+			"name": "201 Created",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 201 Created\"] = responseCode.code === 201;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/messages/{{message_id_own}}/replies?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"body\":\"This is a reply test via API\"}"
+				},
+				"description": "The resource was successfully created."
+			},
+			"response": [
+				{
+					"id": "75372d2b-8335-40c9-9544-4087725d2f24",
+					"name": "Sample response",
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "667",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=singular",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:31:10 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "201 Created",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "899",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "2328",
+					"body": "{\"id\":10186951084,\"externalId\":\"464218513732024_513653865455155\",\"type\":\"comment\",\"author\":{\"name\":\"Baramubara\",\"authorImage\":\"https://graph.facebook.com/310497749104102/picture\",\"authorExternalId\":\"310497749104102\"},\"postedAt\":\"2015-06-09T20:31:10Z\",\"status\":\"active\",\"body\":\"This is a reply test via API\",\"labels\":[],\"liked\":false,\"likesCount\":0,\"links\":[{\"rel\":\"canonical\",\"href\":\"https://srm-api.staging.cloud.vitrue.com/engage/v1/messages/1425074428001000000000033240511660001426/replies/10186951084\"},{\"rel\":\"self\",\"href\":\"https://srm-api.staging.cloud.vitrue.com/engage/v1/messages/1425074428001000000000033240511660001426/replies/10186951084?bundleId=9059\"}]}"
+				}
+			]
+		},
+		{
+			"name": "202 Accepted",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 202 Created\"] = responseCode.code === 202;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"reportName\":\"Testing post with no action - will publish immediatelly \",\n         \"message\":\"Hello, world I'm publishing\"\n      }\n   ,\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      }\n   ]\n}"
+				},
+				"description": "The resource was asynchronously created."
+			},
+			"response": [
+				{
+					"id": "6f730301-6e19-4fce-b38a-e6abcff3eb89",
+					"name": "Sample response",
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "137",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html;charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:31:27 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "202 Accepted",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "898",
+							"description": ""
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "392",
+					"body": "{\"items\":[{\"id\":\"77962_9775\"}],\"links\":[{\"rel\":\"self\",\"href\":\"https://gatekeeper.staging.cloud.vitrue.com/publish/v1/posts/77962_9775\"}]}"
+				}
+			]
+		},
+		{
+			"name": "400 Bad Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 400 Bad Request\"] = responseCode.code === 400;",
+							"",
+							"//Verifying response data",
+							"",
+							"",
+							"tests[\"Malformed JSON\"] = responseBody === \"Invalid JSON\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/messages/{{message_id_own}}/replies?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"body\":\"This is Malformed JSON\";}"
+				},
+				"description": "Bad request. (Malformed JSON)"
+			},
+			"response": [
+				{
+					"id": "e40bc61e-dfd4-47db-82a5-96e17b9bb127",
+					"name": "Sample response",
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "205",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:31:40 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "400 Bad Request",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "897",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "107",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.3\",\"title\":\"Bad Request.\",\"detail\":\"The request cannot be processed due to an error in the provided data: Invalid JSON\",\"status\":400}"
+				}
+			]
+		},
+		{
+			"name": "401 Unauthorized accounts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 401 Unauthorized\"] = responseCode.code === 401;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer f2e7b329daaae2212f9623719e17db2d789fe90d7463f2255af0523111748e4c",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "should return 401 Unauthorized error and should not return any data."
+			},
+			"response": [
+				{
+					"id": "8d09223c-648c-49e3-87a3-211afc790df0",
+					"name": "Sample response",
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:31:53 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "401 Unauthorized",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "1840",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2\",\"title\":\"Unauthorized.\",\"detail\":\"The user credentials provided with the request are invalid or do not provide the necessary level of access.\",\"status\":401}"
+				}
+			]
+		},
+		{
+			"name": "401 Unauthorized engage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 401 Unauthorized\"] = responseCode.code === 401;",
+							"",
+							"//Verifying response data",
+							"var data = JSON.parse(responseBody);",
+							"tests[\"Status 401\"] = data.status === 401;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/messages?bundleId={{bundle_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer f2e7b329daaae2212f9623719e17db2d789fe90d7463f2255af0523111748e4c",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "The user credentials provided with the request are invalid or do not provide the necessary level of access."
+			},
+			"response": [
+				{
+					"id": "f2cdecaf-72ea-4004-9672-3a82c55001ee",
+					"name": "Sample response",
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 19:07:54 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "401 Unauthorized",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "2040",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2\",\"title\":\"Unauthorized.\",\"detail\":\"The user credentials provided with the request are invalid or do not provide the necessary level of access.\",\"status\":401}"
+				}
+			]
+		},
+		{
+			"name": "401 Unauthorized publish",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 401 Unauthorized\"] = responseCode.code === 401;",
+							"",
+							"//Verifying response data",
+							"var data = JSON.parse(responseBody);",
+							"tests[\"Status 401\"] = data.status === 401;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer f2e7b329daaae2212f9623719e17db2d789fe90d7463f2255af0523111748e4c",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "The user credentials provided with the request are invalid or do not provide the necessary level of access."
+			},
+			"response": [
+				{
+					"id": "e8e45c08-97f5-4da1-8ae5-9494efb735e6",
+					"name": "Sample response",
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Thu, 28 May 2015 19:07:54 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "401 Unauthorized",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "2040",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2\",\"title\":\"Unauthorized.\",\"detail\":\"The user credentials provided with the request are invalid or do not provide the necessary level of access.\",\"status\":401}"
+				}
+			]
+		},
+		{
+			"name": "403 Request is forbidden",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 403 Request is forbidden\"] = responseCode.code === 403;",
+							"",
+							"//Verifying response data",
+							"var data = JSON.parse(responseBody);",
+							"tests[\"Status 403\"] = data.status === 403;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/messages?BUNDLE_ID={{bundle_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "An error occurred executing the request."
+			},
+			"response": [
+				{
+					"id": "54aaf15b-3d1a-4ccd-8cef-81a7a4921c45",
+					"name": "Sample response",
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "210",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:32:10 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "403 Forbidden",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "896",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "351",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4\",\"title\":\"Request is forbidden.\",\"detail\":\"An error occurred executing the request: {\\\"error\\\":\\\"Bundle id is required\\\"}\",\"status\":403}"
+				}
+			]
+		},
+		{
+			"name": "403 Request is forbidden (no access to bundle)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 403 Request is forbidden\"] = responseCode.code === 403;",
+							"",
+							"//Verifying response data",
+							"var data = JSON.parse(responseBody);",
+							"tests[\"Status 403\"] = data.status === 403;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/bundles/8699",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "An error occurred executing the request."
+			},
+			"response": [
+				{
+					"id": "6f22cabc-38d3-45f3-b111-91d9e2b5e0a6",
+					"name": "Sample response",
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "174",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:32:21 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "403 Forbidden",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "895",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "271",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4\",\"title\":\"Request is forbidden.\",\"detail\":\"An error occurred executing the request:  \",\"status\":403}"
+				}
+			]
+		},
+		{
+			"name": "404 Not Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 404 Not Found\"] = responseCode.code === 404;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/INVALID_ENDPOINT?bundleId={{bundle_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "The desired route is not available for the specified HTTP method."
+			},
+			"response": [
+				{
+					"id": "a16cf4dc-7019-4e91-b44c-1aac1d545bab",
+					"name": "Sample response",
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "297",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:32:31 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "404 Not Found",
+							"description": ""
+						},
+						{
+							"name": "X-Cascade",
+							"key": "X-Cascade",
+							"value": "pass",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "895",
+							"description": ""
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "257",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5\",\"title\":\"Unknown url/method combination.\",\"detail\":\"The desired route [https://srm-api.staging.cloud.vitrue.com/engage/v1/INVALID_ENDPOINT?bundleId=9059] is not available for the specified HTTP method [GET].\",\"status\":404}"
+				}
+			]
+		},
+		{
+			"name": "404 Unknown url/method combo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 404 Not Found\"] = responseCode.code === 404;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "The desired route is not available for the specified HTTP method."
+			},
+			"response": [
+				{
+					"id": "7564e6e7-9da6-4e7a-8b70-1cdbfa43835f",
+					"name": "Sample response",
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "274",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:32:39 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "404 Not Found",
+							"description": ""
+						},
+						{
+							"name": "X-Cascade",
+							"key": "X-Cascade",
+							"value": "pass",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "894",
+							"description": ""
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "251",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5\",\"title\":\"Unknown url/method combination.\",\"detail\":\"The desired route [https://srm-api.staging.cloud.vitrue.com/admin/v1/accounts] is not available for the specified HTTP method [PUT].\",\"status\":404}"
+				}
+			]
+		},
+		{
+			"name": "422 Unprocessable entity/resource",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 422 Unprocessable entity or resource\"] = responseCode.code === 422;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/messages/{{message_id_own}}/replies?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"REPORT_NAME\":\"Testing post with no action - will publish immediatelly \",\n         \"message\":\"Hello, world I'm publishing\"\n      }\n   ,\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      }\n   ]\n}"
+				},
+				"description": "The entity or resource identified in the request either does not exist or is otherwise unprocessable."
+			},
+			"response": [
+				{
+					"id": "9de30e6f-6fad-4986-8551-57ec1c4d7f60",
+					"name": "Sample response",
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "230",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:32:49 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "422 Unprocessable Entity",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "893",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "587",
+					"body": "{\"type\":\"https://tools.ietf.org/html/rfc4918#section-11.2\",\"title\":\"Unprocessable entity or resource\",\"detail\":\"The entity or resource identified in the request either does not exist or is otherwise unprocessable:  \",\"status\":422}"
+				}
+			]
+		},
+		{
+			"name": "422 Unprocessable entity/resource copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 422 Unprocessable entity or resource\"] = responseCode.code === 422;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/messages/{{message_id_own}}?bundleId={{bundle_id}}&status=INVALID_STATUS",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "The entity or resource identified in the request either does not exist or is otherwise unprocessable."
+			},
+			"response": [
+				{
+					"id": "ad510757-6218-4bf6-b668-b54288cee6ad",
+					"name": "Sample response",
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "282",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:32:57 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "422 Unprocessable Entity",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "892",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "496",
+					"body": "{\"type\":\"https://tools.ietf.org/html/rfc4918#section-11.2\",\"title\":\"Unprocessable entity or resource\",\"detail\":\"The entity or resource identified in the request either does not exist or is otherwise unprocessable: {\\\"errors\\\":[\\\"Status is not included in the list\\\"]}\",\"status\":422}"
+				}
+			]
+		},
+		{
+			"name": "500 Internal Server Error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 500 Internal Server Error\"] = responseCode.code === 500;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/messages?bundleId=INVALID_BUNDLE",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "An unexpected error occurred processing the request."
+			},
+			"response": [
+				{
+					"id": "54356788-a7c3-4b04-9fe1-57a329982fef",
+					"name": "Sample response",
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "3001",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.oracle.resource+json; type=error",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 09 Jun 2015 20:33:05 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "500 Internal Server Error",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "891",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "949",
+					"body": "{\"type\":\"http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1\",\"title\":\"Internal server error.\",\"detail\":\"An unexpected error occurred processing the request: <!DOCTYPE html>\\n<html>\\n<head>\\n  <title>Oracle SRM</title>\\n  <link href=\\\"/favicon.ico\\\" rel=\\\"shortcut icon\\\" type=\\\"image/vnd.microsoft.icon\\\" />\\n  <link href=\\\"/assets/sessions-f2e2a6a6de0ebe256d080d026337e614.css\\\" media=\\\"screen\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\\n  <link href=\\\"/assets/errors-9fe49e27fc4acc61e73015beb705d414.css\\\" media=\\\"screen\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\" />\\n  <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700|Cabin:400,bold,400italic' rel='stylesheet' type='text/css'>\\n\\n\\n\\n</head>\\n<body class=\\\"api messages index\\\">\\n<div id=\\\"oracle-header-wrapper\\\">\\n  <div id=\\\"oracle-header\\\">\\n    <div class=\\\"logo-text\\\">Social Relationship Management</div>\\n  </div>\\n</div>\\n<div id=\\\"login_container\\\">\\n  <div id=\\\"content\\\">\\n    <div id=\\\"login_form\\\">\\n      <div class=\\\"field\\\">\\n        <div class=\\\"logos\\\">\\n  <div class=\\\"oracle-logo\\\"></div>\\n  <div class=\\\"oracle-srm-logo\\\">ENGAGE</div>\\n</div>\\n\\n      </div>\\n      <h1>Internal Server Error</h1>\\n\\n<p class=\\\"description\\\">\\n  We are sorry but we encountered an error processing your request. We apologize for this inconvenience.\\n</p>\\n\\n<p class=\\\"support\\\">\\n  Please visit <a target='_blank' href='http://support.oracle.com'>support.oracle.com</a> for further assistance, and we will work quickly to make sure your issue is resolved.\\n</p>\\n\\n<div class=\\\"back\\\">\\n  <a href=\\\"https://staging-ucf.involver.com/\\\">Back to Sign In</a>\\n</div>\\n\\n    </div>\\n  </div>\\n</div>\\n<div id=\\\"footer-spacer\\\"></div>\\n<div id=\\\"footer-container\\\">\\n  <footer>\\n    <ul>\\n        <li><a href=\\\"http://www.oracle.com/us/corporate/index.html\\\">About Oracle</a></li>\\n        <li><a href=\\\"http://www.oracle.com/us/syndication/subscribe/index.html\\\">Subscribe</a></li>\\n        <li><a href=\\\"http://www.oracle.com/us/corporate/careers/index.html\\\">Careers</a></li>\\n        <li><a href=\\\"http://www.oracle.com/us/corporate/contact/index.html\\\">Contact Us</a></li>\\n        <li><a href=\\\"http://www.oracle.com/us/sitemaps/index.html\\\">Site Maps</a></li>\\n        <li><a href=\\\"http://www.oracle.com/us/legal/index.html\\\">Legal Notices</a></li>\\n        <li><a href=\\\"http://www.oracle.com/us/legal/terms/index.html\\\">Terms of Use</a></li>\\n        <li><a href=\\\"http://www.oracle.com/us/legal/privacy/index.html\\\">Your Privacy Rights</a></li>\\n    </ul>\\n    <p>\\n      Copyright &copy; 2014, Oracle Corporation and/or its affiliates. All rights reserved.<br/>\\n      Oracle is a registered trademark of Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners.\\n    </p>\\n  </footer>\\n</div>\\n\\n<script type=\\\"text/javascript\\\">\\n  $(document).ready(function() {\\n    $('input, textarea').placeholder();\\n  });\\n</script>\\n\\n</body>\\n</html>\",\"status\":500}"
+				}
+			]
+		},
+		{
+			"name": "501 Not implemented error WIP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 501 Not implemented error\"] = responseCode.code === 501;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{engage_gk}}/metadata-catalog/messages?bundleId={{bundle_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "The requested functionality has not been implemented."
+			},
+			"response": []
+		},
+		{
+			"name": "502 SRM API server error WIP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"//tests[\"Status code is 502 SRM API server error\"] = responseCode.code === 502;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{accounts_gk}}/accounts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "An error occurred processing the request."
+			},
+			"response": []
+		},
+		{
+			"name": "204 No Content",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"//Verifying response code",
+							"tests[\"Status code is 202 Created\"] = responseCode.code === 202;",
+							"",
+							"//Verifying response data",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts/{{post_id_del}}?bundleId={{bundle_id}}",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "The request returned no content."
+			},
+			"response": []
+		}
+	]
+}

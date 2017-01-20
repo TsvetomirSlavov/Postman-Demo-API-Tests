@@ -1,0 +1,1065 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API PUBLISH",
+		"_postman_id": "df7cfb6d-1451-25fa-b303-c7bc6c078bf5",
+		"description": "Collection of Public API endpoints for Publish",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting posts list"
+			},
+			"response": [
+				{
+					"id": "cd3b0857-2312-4141-9187-37c778427ae0",
+					"name": "Sample response",
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "must-revalidate, private, max-age=0",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Tue, 30 Dec 2014 00:11:11 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx/1.4.2",
+							"description": ""
+						},
+						{
+							"name": "Status",
+							"key": "Status",
+							"value": "200 OK",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "X-Rack-Cache",
+							"key": "X-Rack-Cache",
+							"value": "miss",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Limit",
+							"key": "X-RateLimit-Limit",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-RateLimit-Remaining",
+							"key": "X-RateLimit-Remaining",
+							"value": "900",
+							"description": ""
+						},
+						{
+							"name": "X-Request-Id",
+							"key": "X-Request-Id",
+							"value": "752c17af99d788564c1d6e66013935b1",
+							"description": ""
+						},
+						{
+							"name": "X-Runtime",
+							"key": "X-Runtime",
+							"value": "0.735474",
+							"description": ""
+						},
+						{
+							"name": "X-UA-Compatible",
+							"key": "X-UA-Compatible",
+							"value": "IE=Edge,chrome=1",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "915",
+					"body": "{\"items\":[{\"id\":1660,\"external_id\":\"310497749104102_426881390799070\",\"message\":\"Hello, beats\",\"publish_message\":\"Hello, beats\",\"description\":null,\"report_name\":\"Testing Stuff insta\",\"title\":null,\"author\":{\"id\":274,\"name\":\"Yuriy Social\"},\"user\":{\"id\":274,\"name\":\"Yuriy Social\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_426881390799070\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-17T18:48:46Z\",\"publish_at\":null,\"published_at\":\"2014-12-17T18:48:56Z\"},{\"id\":1659,\"external_id\":\"310497749104102_426482324172310\",\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff\",\"title\":null,\"author\":{\"id\":274,\"name\":\"Yuriy Social\"},\"user\":{\"id\":274,\"name\":\"Yuriy Social\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_426482324172310\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-16T21:03:52Z\",\"publish_at\":null,\"published_at\":\"2014-12-16T21:04:04Z\"},{\"id\":1658,\"external_id\":\"310497749104102_426188550868354\",\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff\",\"title\":null,\"author\":{\"id\":858,\"name\":\"john varghese\"},\"user\":{\"id\":858,\"name\":\"john varghese\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_426188550868354\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-16T05:37:17Z\",\"publish_at\":null,\"published_at\":\"2014-12-16T05:37:22Z\"},{\"id\":1657,\"external_id\":\"310497749104102_426003470886862\",\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff NEW!!!\",\"title\":null,\"author\":{\"id\":274,\"name\":\"Yuriy Social\"},\"user\":{\"id\":274,\"name\":\"Yuriy Social\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_426003470886862\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-15T18:56:24Z\",\"publish_at\":null,\"published_at\":\"2014-12-15T18:56:30Z\"},{\"id\":1656,\"external_id\":\"310497749104102_423817074438835\",\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff\",\"title\":null,\"author\":{\"id\":858,\"name\":\"john varghese\"},\"user\":{\"id\":858,\"name\":\"john varghese\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_423817074438835\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-10T23:28:49Z\",\"publish_at\":null,\"published_at\":\"2014-12-10T23:28:57Z\"},{\"id\":1650,\"external_id\":null,\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff\",\"title\":null,\"author\":{\"id\":858,\"name\":\"john varghese\"},\"user\":{\"id\":858,\"name\":\"john varghese\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false},\"state\":\"error_publishing\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-10T20:07:46Z\",\"publish_at\":null,\"published_at\":null},{\"id\":1648,\"external_id\":\"310497749104102_423738861113323\",\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff\",\"title\":null,\"author\":{\"id\":858,\"name\":\"john varghese\"},\"user\":{\"id\":858,\"name\":\"john varghese\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_423738861113323\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-10T20:02:52Z\",\"publish_at\":null,\"published_at\":\"2014-12-10T20:03:11Z\"},{\"id\":1641,\"external_id\":\"310497749104102_423355844484958\",\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff\",\"title\":null,\"author\":{\"id\":274,\"name\":\"Yuriy Social\"},\"user\":{\"id\":274,\"name\":\"Yuriy Social\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_423355844484958\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-10T02:41:13Z\",\"publish_at\":null,\"published_at\":\"2014-12-10T02:41:18Z\"},{\"id\":1622,\"external_id\":null,\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff\",\"title\":null,\"author\":{\"id\":274,\"name\":\"Yuriy Social\"},\"user\":{\"id\":274,\"name\":\"Yuriy Social\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false},\"state\":\"error_publishing\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-08T22:25:32Z\",\"publish_at\":null,\"published_at\":null},{\"id\":1621,\"external_id\":null,\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff\",\"title\":null,\"author\":{\"id\":274,\"name\":\"Yuriy Social\"},\"user\":{\"id\":274,\"name\":\"Yuriy Social\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false},\"state\":\"error_publishing\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-08T22:24:26Z\",\"publish_at\":null,\"published_at\":null},{\"id\":1620,\"external_id\":\"310497749104102_422761881211021\",\"message\":\"Hello, world\",\"publish_message\":\"Hello, world\",\"description\":null,\"report_name\":\"Testing Stuff\",\"title\":null,\"author\":{\"id\":274,\"name\":\"Yuriy Social\"},\"user\":{\"id\":274,\"name\":\"Yuriy Social\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"fb_call_to_action\":{},\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":false,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_422761881211021\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-08T22:15:58Z\",\"publish_at\":null,\"published_at\":\"2014-12-08T22:16:14Z\"},{\"id\":1587,\"external_id\":\"310497749104102_419698274850715\",\"message\":\"test attachement\",\"publish_message\":\"test attachement\",\"description\":null,\"report_name\":\"Attachment API tests - post5\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":true,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_419698274850715\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":\"image\",\"url\":\"http://s3.amazonaws.com/publisher_preview-s3fs-public-3ed74cb/media/image/43/96116079b411e4a7944f733460584a/ukraine.jpg\",\"thumbnail_url\":\"http://s3.amazonaws.com/publisher_preview-s3fs-public-3ed74cb/media/image/43/96116079b411e4a7944f733460584a/ukraine.jpg\"},\"thumbnail_url\":\"http://s3.amazonaws.com/publisher_preview-s3fs-public-3ed74cb/media/image/43/96116079b411e4a7944f733460584a/ukraine.jpg\",\"created_at\":\"2014-12-01T23:47:57Z\",\"publish_at\":null,\"published_at\":\"2014-12-01T23:48:10Z\"},{\"id\":1584,\"external_id\":\"539568405188464642\",\"message\":\"great read http://www.entrepreneur.com/article/239206\",\"publish_message\":\"great read http://www.entrepreneur.com/article/239206\",\"description\":null,\"report_name\":\"Scheduled FOREALL post 4\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":true,\"legacy_attachments\":false},\"state\":\"published\",\"type\":\"twitter\",\"resource\":{\"id\":66094,\"name\":\"YuriySocial\",\"network\":\"twitter\"},\"stream\":{\"id\":66094,\"name\":\"YuriySocial\",\"network\":\"twitter\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-01T23:44:11Z\",\"publish_at\":\"2014-12-01T23:55:00Z\",\"published_at\":\"2014-12-01T23:55:07Z\"},{\"id\":1585,\"external_id\":\"539568402063699968\",\"message\":\"great read http://www.entrepreneur.com/article/239206\",\"publish_message\":\"great read http://www.entrepreneur.com/article/239206\",\"description\":null,\"report_name\":\"Scheduled FOREALL post 4\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":true,\"legacy_attachments\":false},\"state\":\"published\",\"type\":\"twitter\",\"resource\":{\"id\":66095,\"name\":\"yuriytest1\",\"network\":\"twitter\"},\"stream\":{\"id\":66095,\"name\":\"yuriytest1\",\"network\":\"twitter\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-01T23:44:11Z\",\"publish_at\":\"2014-12-01T23:55:00Z\",\"published_at\":\"2014-12-01T23:55:06Z\"},{\"id\":1582,\"external_id\":\"170312146406012_593731794064043\",\"message\":\"great read http://www.entrepreneur.com/article/239206\",\"publish_message\":\"great read http://www.entrepreneur.com/article/239206\",\"description\":null,\"report_name\":\"Scheduled FOREALL post 4\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":true,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"170312146406012_593731794064043\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66091,\"name\":\"Bazaaaaaaaaar QA\",\"network\":\"facebook\"},\"stream\":{\"id\":66091,\"name\":\"Bazaaaaaaaaar QA\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-01T23:44:10Z\",\"publish_at\":\"2014-12-01T23:55:00Z\",\"published_at\":\"2014-12-01T23:55:06Z\"},{\"id\":1583,\"external_id\":\"310497749104102_419699914850551\",\"message\":\"great read http://www.entrepreneur.com/article/239206\",\"publish_message\":\"great read http://www.entrepreneur.com/article/239206\",\"description\":null,\"report_name\":\"Scheduled FOREALL post 4\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":false,\"append_landing_page_uri\":true,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_419699914850551\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-01T23:44:10Z\",\"publish_at\":\"2014-12-01T23:55:00Z\",\"published_at\":\"2014-12-01T23:55:07Z\"},{\"id\":1580,\"external_id\":\"539565235829764096\",\"message\":\"good read http://www.entrepreneur.com/article/239206\",\"publish_message\":\"good read http://www.entrepreneur.com/article/239206\",\"description\":null,\"report_name\":\"Scheduled post 3\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false},\"state\":\"published\",\"type\":\"twitter\",\"resource\":{\"id\":66094,\"name\":\"YuriySocial\",\"network\":\"twitter\"},\"stream\":{\"id\":66094,\"name\":\"YuriySocial\",\"network\":\"twitter\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-01T23:42:24Z\",\"publish_at\":null,\"published_at\":\"2014-12-01T23:42:31Z\"},{\"id\":1581,\"external_id\":\"539565232436547584\",\"message\":\"good read http://www.entrepreneur.com/article/239206\",\"publish_message\":\"good read http://www.entrepreneur.com/article/239206\",\"description\":null,\"report_name\":\"Scheduled post 3\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false},\"state\":\"published\",\"type\":\"twitter\",\"resource\":{\"id\":66095,\"name\":\"yuriytest1\",\"network\":\"twitter\"},\"stream\":{\"id\":66095,\"name\":\"yuriytest1\",\"network\":\"twitter\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-01T23:42:24Z\",\"publish_at\":null,\"published_at\":\"2014-12-01T23:42:31Z\"},{\"id\":1578,\"external_id\":\"170312146406012_593727600731129\",\"message\":\"good read http://www.entrepreneur.com/article/239206\",\"publish_message\":\"good read http://www.entrepreneur.com/article/239206\",\"description\":null,\"report_name\":\"Scheduled post 3\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"170312146406012_593727600731129\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66091,\"name\":\"Bazaaaaaaaaar QA\",\"network\":\"facebook\"},\"stream\":{\"id\":66091,\"name\":\"Bazaaaaaaaaar QA\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-01T23:42:23Z\",\"publish_at\":null,\"published_at\":\"2014-12-01T23:42:33Z\"},{\"id\":1579,\"external_id\":\"310497749104102_419696988184177\",\"message\":\"good read http://www.entrepreneur.com/article/239206\",\"publish_message\":\"good read http://www.entrepreneur.com/article/239206\",\"description\":null,\"report_name\":\"Scheduled post 3\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_419696988184177\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-12-01T23:42:23Z\",\"publish_at\":null,\"published_at\":\"2014-12-01T23:42:31Z\"},{\"id\":1565,\"external_id\":\"537369221131698177\",\"message\":\"TW post\",\"publish_message\":\"TW post\",\"description\":null,\"report_name\":\"Public API testing post 2\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false},\"state\":\"published\",\"type\":\"twitter\",\"resource\":{\"id\":66095,\"name\":\"yuriytest1\",\"network\":\"twitter\"},\"stream\":{\"id\":66095,\"name\":\"yuriytest1\",\"network\":\"twitter\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-11-25T22:16:08Z\",\"publish_at\":null,\"published_at\":\"2014-11-25T22:16:20Z\"},{\"id\":1566,\"external_id\":\"537369238160543744\",\"message\":\"TW post\",\"publish_message\":\"TW post\",\"description\":null,\"report_name\":\"Public API testing post 2\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false},\"state\":\"published\",\"type\":\"twitter\",\"resource\":{\"id\":66096,\"name\":\"yuriytester2\",\"network\":\"twitter\"},\"stream\":{\"id\":66096,\"name\":\"yuriytester2\",\"network\":\"twitter\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-11-25T22:16:08Z\",\"publish_at\":null,\"published_at\":\"2014-11-25T22:16:24Z\"},{\"id\":1567,\"external_id\":\"537369225615384576\",\"message\":\"TW post\",\"publish_message\":\"TW post\",\"description\":null,\"report_name\":\"Public API testing post 2\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false},\"state\":\"published\",\"type\":\"twitter\",\"resource\":{\"id\":66097,\"name\":\"yuriytest3\",\"network\":\"twitter\"},\"stream\":{\"id\":66097,\"name\":\"yuriytest3\",\"network\":\"twitter\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-11-25T22:16:08Z\",\"publish_at\":null,\"published_at\":\"2014-11-25T22:16:22Z\"},{\"id\":1564,\"external_id\":\"537369274697146368\",\"message\":\"TW post\",\"publish_message\":\"TW post\",\"description\":null,\"report_name\":\"Public API testing post 2\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false},\"state\":\"published\",\"type\":\"twitter\",\"resource\":{\"id\":66094,\"name\":\"YuriySocial\",\"network\":\"twitter\"},\"stream\":{\"id\":66094,\"name\":\"YuriySocial\",\"network\":\"twitter\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-11-25T22:16:07Z\",\"publish_at\":null,\"published_at\":\"2014-11-25T22:16:33Z\"},{\"id\":1562,\"external_id\":\"310497749104102_417185641768645\",\"message\":\"FB post\",\"publish_message\":\"FB post\",\"description\":null,\"report_name\":\"Public API testing post 1\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"310497749104102_417185641768645\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"stream\":{\"id\":66092,\"name\":\"Baramubara\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-11-25T22:13:44Z\",\"publish_at\":null,\"published_at\":\"2014-11-25T22:13:51Z\"},{\"id\":1563,\"external_id\":\"200198200003635_808437599179689\",\"message\":\"FB post\",\"publish_message\":\"FB post\",\"description\":null,\"report_name\":\"Public API testing post 1\",\"title\":null,\"author\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"user\":{\"id\":67,\"name\":\"Yuriy THE Oracle\"},\"link\":null,\"destination_link\":null,\"short_url\":null,\"destination_url\":null,\"feed_targeting\":null,\"geo_targeting\":null,\"settings\":{\"analytics\":\"\",\"is_suggested\":false,\"is_unpublished\":false,\"twitter_update_with_media\":false,\"publish_as_photo\":false,\"no_media_attachment\":false,\"append_landing_page_image\":true,\"append_landing_page_uri\":true,\"legacy_attachments\":false,\"external_response\":[{\"post_id\":\"200198200003635_808437599179689\"}]},\"state\":\"published\",\"type\":\"facebook\",\"resource\":{\"id\":68059,\"name\":\"Analytics1\",\"network\":\"facebook\"},\"stream\":{\"id\":68059,\"name\":\"Analytics1\",\"network\":\"facebook\"},\"attachment\":{\"type\":null,\"url\":null,\"thumbnail_url\":null},\"thumbnail_url\":null,\"created_at\":\"2014-11-25T22:13:44Z\",\"publish_at\":null,\"published_at\":\"2014-11-25T22:13:51Z\"}]}"
+				}
+			]
+		},
+		{
+			"name": "GET /posts/:id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts/post_id?bundleId={{bundle_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting posts list"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /posts?resource_ids",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"var data = JSON.parse(responseBody);",
+							"",
+							"for (i = 0; i < data.items.length; i++) {",
+							"  tests[\"Post on TW Yuriy Social \" + i] = [66094,129052].indexOf(data.items[i].resource.id) > -1;",
+							"}"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundle_id={{bundle_id}}&resource_ids={{tw_resource_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting posts list for specific resource"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /posts?limit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}&limit=3",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting posts list with limit"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /posts/:id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts/{{post_id}}?bundleId={{bundle_id}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"report_name\":\"Updated report name NEW\",\n         \"message\":\"Hello, this is update testing NEWEST\"\n      }\n      \n      }"
+				},
+				"description": "Updating posts"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /posts/:post_id_new",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts/{{post_id_new}}?bundleId={{bundle_id}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"report_name\":\"Updated report name NEW\",\n         \"message\":\"Hello, this is update testing NEWEST \"\n      }\n      \n      }"
+				},
+				"description": "Updating posts with new id e.g. 12345_4321\nbroadcast_id, stream_id"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts FB+TW+LI+SW+G+",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Publishing to all supported channels...\",\n         \"message\":\"Hello, this is post to FB, TW, SW, LI, G+\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      },\n     {  \n         \"identifier\":\"YuriySocial\",\n         \"network\":\"twitter\"\n      },\n      {  \n         \"identifier\":\"106448488725363562543\",\n         \"network\":\"google\"\n      },\n     {  \n         \"identifier\":\"3803654524\",\n         \"network\":\"sina-weibo\"\n      },\n     {  \n         \"identifier\":\"3791967\",\n         \"network\":\"linkedin\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing to all supported channel types(fb, tw, sw, li, g+)"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts FB & TW",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Publishing to multiple channels...\",\n         \"message\":\"Hello, this is post to FB and TW\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      },\n     {  \n         \"identifier\":\"YuriySocial\",\n         \"network\":\"twitter\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing to FB and TW post"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts FB & TW + link(body)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Publishing to multiple channels + link in the body...\",\n         \"message\":\"Hello, this is post to FB and TW + link http://bit.ly/1Btgcg8 \"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      },\n     {  \n         \"identifier\":\"YuriySocial\",\n         \"network\":\"twitter\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing to FB and TW post with link in the body"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts FB",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"reportName\":\"Testing post with no action - will publish immediatelly \",\n         \"message\":\"Hello, world I'm publishing\"\n      }\n   ,\n   \"resources\":[  \n      {  \n         \"identifier\":\"261459760638937\",\n         \"network\":\"facebook\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a FB post (action not specified = default, publishing immediatelly)"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts FB action:publish",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff\",\n         \"message\":\"Hello, world\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a FB post "
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts FB action:draft",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing DRAFT saving...\",\n         \"message\":\"Hello, this is 3rd DRAFT\"\n      },\n  \"action\":\n    {\"type\":\"draft\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      }\n   ]\n}\n"
+				},
+				"description": "Saving a FB post as draft "
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts FB action:schedule",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"new_post\", \"TEST + 1\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n        \"report_name\":\"{{new_post}}\",\n         \"message\":\"Hello, this is scheduled post\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"schedule\",\n     \"time\":\"2015-08-02T19:50:55Z\",\n     \"time_zone\":\"America/Los_Angeles\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      }\n   ]\n}"
+				},
+				"description": "Scheduling a FB post "
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts FB +attachment ???",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff\",\n         \"message\":\"Hello, world\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a FB post with attachment"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts FB +tags ???",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff\",\n         \"message\":\"Hello, world\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"310497749104102\",\n         \"network\":\"facebook\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a FB post with tags"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts TW",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff on twitter\",\n         \"message\":\"Hello, TW test\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"YuriySocial\",\n         \"network\":\"twitter\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a TW post"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts TW +attachment???",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff on twitter\",\n         \"message\":\"Hello, TW test\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"YuriySocial\",\n         \"network\":\"twitter\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a TW post with attachment"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts TW +tags ???",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff on twitter\",\n         \"message\":\"Hello, TW test\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"YuriySocial\",\n         \"network\":\"twitter\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a TW post with tags"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts TW +140chars ???",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff on twitter over 140 chars\",\n         \"message\":\"Hello, ...MUST FAIL... TW post with more than 140 characters..... Hello, TW post with more than 140 characters..... Hello, TW post with more than 140 characters... THE END\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"YuriySocial\",\n         \"network\":\"twitter\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a TW post with over 140 chars"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts G+",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff on google\",\n         \"message\":\"Hello, G+ test\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"106448488725363562543\",\n         \"network\":\"google\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a G+ post"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts LI",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff on Linkedin\",\n         \"message\":\"Hello, LI test\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"3791967\",\n         \"network\":\"linkedin\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a LI post"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /posts SW",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 202 Accepted\"] = responseCode.code === 202;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts?bundleId={{bundle_id}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n   \"content\": \n      {  \n         \"type\":\"text\",\n         \"report_name\":\"Testing Stuff on sina weibo\",\n         \"message\":\"Hello, SW test\"\n      }\n   ,\n  \"action\":\n    {\"type\":\"publish\"\n    },\n   \"resources\":[  \n      {  \n         \"identifier\":\"3803654524\",\n         \"network\":\"sina-weibo\"\n      }\n   ]\n}"
+				},
+				"description": "Publishing a SW post"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /posts/:post_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Success true\"] = responseBody.has(\"true\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts/{{post_id}}?bundleId={{bundle_id}}",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Deleting a post from SRM Publish(not social network)"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /posts/:post_id remove true",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Success true\"] = responseBody.has(\"true\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts/{{post_id_del}}?bundleId={{bundle_id}}&remove_from_network=true",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Deleting a post from Publish and social network"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /posts/:post_id remove false",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Success true\"] = responseBody.has(\"true\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts/{{post_id_del}}?bundleId={{bundle_id}}&remove_from_network=false",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Deleting a post from SRM Publish only(post won't delete on social network)"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /posts/:post_id remove 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Success true\"] = responseBody.has(\"true\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts/{{post_id_del}}?bundleId={{bundle_id}}&remove_from_network=1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Deleting a post from Publish and social network"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /posts/:post_id remove 0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200 OK\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Success true\"] = responseBody.has(\"true\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{publish_gk}}/posts/{{post_id_del}}?bundleId={{bundle_id}}&remove_from_network=0",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Deleting a post from SRM Publish only(post won't delete on social network)"
+			},
+			"response": []
+		}
+	]
+}

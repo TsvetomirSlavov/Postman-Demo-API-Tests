@@ -1,0 +1,171 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SRMA v3",
+		"_postman_id": "c069dca8-d810-ad8b-6f30-fc70be1d9f3b",
+		"description": "test SRMA API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /bundles",
+			"request": {
+				"url": "http://srma-api.staging.cloud.vitrue.com/api/bundles",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Vitrue-API-Key",
+						"value": "41993962-631d-4e31-ae8d-d1740a55bf50",
+						"description": ""
+					},
+					{
+						"key": "X-Accountable-Client",
+						"value": "SRMA",
+						"description": ""
+					},
+					{
+						"key": "X-Vitrue-current-user-id",
+						"value": "1830",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.oraclesocial.v3+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting children bundles( not a root bundle) where user is currently logged in."
+			},
+			"response": []
+		},
+		{
+			"name": "GET /bundles/:bundle_id",
+			"request": {
+				"url": "http://srma-api.staging.cloud.vitrue.com/api/bundles/4548",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Vitrue-API-Key",
+						"value": "41993962-631d-4e31-ae8d-d1740a55bf50",
+						"description": ""
+					},
+					{
+						"key": "X-Accountable-Client",
+						"value": "SRMA",
+						"description": ""
+					},
+					{
+						"key": "X-Vitrue-current-user-id",
+						"value": "1830",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.oraclesocial.v3+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting specific bundle info"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /bundles/:bundle_id/resources",
+			"request": {
+				"url": "http://srma-api.staging.cloud.vitrue.com/api/bundles/4548/resources",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Vitrue-API-Key",
+						"value": "41993962-631d-4e31-ae8d-d1740a55bf50",
+						"description": ""
+					},
+					{
+						"key": "X-Accountable-Client",
+						"value": "SRMA",
+						"description": ""
+					},
+					{
+						"key": "X-Vitrue-current-user-id",
+						"value": "1830",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.oraclesocial.v3+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting resources specific to the bundle"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /resources",
+			"request": {
+				"url": "http://srma-api.staging.cloud.vitrue.com/api/resources",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Vitrue-API-Key",
+						"value": "41993962-631d-4e31-ae8d-d1740a55bf50",
+						"description": ""
+					},
+					{
+						"key": "X-Accountable-Client",
+						"value": "SRMA",
+						"description": ""
+					},
+					{
+						"key": "X-Vitrue-current-user-id",
+						"value": "1830",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.oraclesocial.v3+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting resources specific to the bundle user is currently logged in"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /resources/:resource_id",
+			"request": {
+				"url": "http://srma-api.staging.cloud.vitrue.com/api/resources/66096",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Vitrue-API-Key",
+						"value": "41993962-631d-4e31-ae8d-d1740a55bf50",
+						"description": ""
+					},
+					{
+						"key": "X-Accountable-Client",
+						"value": "SRMA",
+						"description": ""
+					},
+					{
+						"key": "X-Vitrue-current-user-id",
+						"value": "1830",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.oraclesocial.v3+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Getting specific resource info"
+			},
+			"response": []
+		}
+	]
+}
